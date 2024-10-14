@@ -13,10 +13,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from ariadne.contrib.test import TestRecommender
+#from ariadne.contrib.test import TestRecommender
 from ariadne.server import Server
 from ariadne.util import setup_logging
 from ariadne.contrib.spacy import SpacyNerClassifier
+from ariadne.contrib.spacy import SpacyPosClassifier
+from ariadne.contrib.spacy import SpacyLemmaClassifier
+from ariadne.contrib.spacy import SpacySpanClassifier
 
 setup_logging()
 
@@ -29,6 +32,7 @@ server = Server()
 server.add_classifier("spacy_ner", SpacyNerClassifier(model_name="la_core_web_lg", script='latin'))
 server.add_classifier("spacy_pos", SpacyPosClassifier(model_name="la_core_web_lg", script='latin'))
 server.add_classifier("spacy_lemma", SpacyLemmaClassifier(model_name="la_core_web_lg", script='latin'))
+server.add_classifier("spacy_span", SpacySpanClassifier(model_name="la_core_web_lg", script='latin'))
 
 # server.add_classifier("sklearn_sentence", SklearnSentenceClassifier())
 # server.add_classifier("jieba", JiebaSegmenter())
