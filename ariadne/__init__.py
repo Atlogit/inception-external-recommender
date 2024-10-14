@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Licensed to the Technische Universität Darmstadt under one
 # or more contributor license agreements.  See the NOTICE file
 # distributed with this work for additional information
@@ -14,8 +13,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-=======
->>>>>>> my-local-changes
 from pathlib import Path
 
 model_directory: Path = Path(__file__).resolve().parents[1] / "models"
