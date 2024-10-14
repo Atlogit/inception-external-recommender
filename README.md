@@ -24,16 +24,9 @@ listed and explained below:
 <!--- * `doc` for being able to build the documentation % -->
 * `dev` for being able to develop this package
 
-Note that depending on your system, it may be necessary to install certain system libraries manually
-before activating the contrib dependencies. For example on macOS, `libomp` is required by the `lightgbm`
-contrib dependency:
-
-    brew install libomp
-
 To install for example the `contrib` dependencies run:
     
     pip install -e ".[contrib]"
-
  
 ## Starting a simple recommender
 
@@ -108,7 +101,6 @@ following table provides an overview about them:
 | SpacyPosClassifier | Part-of-speech prediction with [spaCy](https://spacy.io/) | no |
 | AdapterSequenceTagger | Sequence tagger using [Adapters](https://adapterhub.ml/) | no |
 | AdapterSentenceClassifier | Sentence classifier using [Adapters](https://adapterhub.ml/) | no |
-| FlairNERClassifier | Sequence tagger using [Flair](https://flairnlp.github.io/) | no |
 
 For using trainable recommenders it is important to check the checkbox *Trainable* when adding
 the external recommender to your project. To be able to get predictions of a added trainable

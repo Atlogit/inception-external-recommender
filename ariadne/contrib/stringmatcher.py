@@ -1,18 +1,3 @@
-# Licensed to the Technische Universität Darmstadt under one
-# or more contributor license agreements.  See the NOTICE file
-# distributed with this work for additional information
-# regarding copyright ownership.  The Technische Universität Darmstadt
-# licenses this file to you under the Apache License, Version 2.0 (the
-# "License"); you may not use this file except in compliance
-# with the License.
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
 import logging
 from collections import defaultdict
 from itertools import chain
@@ -84,7 +69,7 @@ class LevenshteinStringMatcher(Classifier):
         m = Map.from_iter(items)
 
         # We iterate over the all candidates and check whether they match
-        for begin, end, term in chain(
+        for (begin, end, term) in chain(
             self._generate_candidates(cas, 3), self._generate_candidates(cas, 2), self._generate_candidates(cas, 1)
         ):
             for mention, label_id in m.search(term=term, max_dist=2):
